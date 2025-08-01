@@ -48,6 +48,8 @@ Adds a secure backend (Node.js, Express, MySQL) to the existing React frontend, 
 6. Have Access to Admin Dashboard: Email -> john.doe@example.com
                                    Password -> admin123
 7. To access the Employee Dashboard: You can Sign Up!
+8. To run frontend: npm run dev
+9. To run backend: npm run devStart
 
 ---
 
