@@ -133,14 +133,12 @@ Key:
 
 ## Project Structure
 
-```
 backend/
-├── controllers/       # API handlers
-├── middleware/        # Auth & validation
-├── models/            # DB queries
-├── routes/            # API routes
-└── .env               # Protect all our sensitive information
-```
+├── controllers/ # API handlers
+├── middleware/ # Auth & validation
+├── models/ # DB queries
+├── routes/ # API routes
+└── .env # Protect all our sensitive information
 
 ---
 
