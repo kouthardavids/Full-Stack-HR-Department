@@ -101,7 +101,6 @@ Key:
 * Passwords hashed with bcrypt
 * SQL injection prevented by parameterized queries
 * JWT tokens expire after 1 hour
-* Audit logs via database triggers
 
 ---
 
@@ -109,7 +108,7 @@ Key:
 
 ### 🏷 **QR Attendance Tracking**  
 * Mobile check-in/out via QR scanning  
-* Real-time location + timestamp validation  
+* Real-time timestamp validation  
 * Endpoint:  
 
 ### 🔐 **Security**  
