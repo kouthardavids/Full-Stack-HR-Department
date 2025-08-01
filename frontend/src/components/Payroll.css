@@ -1,0 +1,254 @@
+/* Remove all purple borders and reset table styling */
+.table {
+  border: none !important;
+  border-collapse: separate;
+  border-spacing: 0;
+}
+
+.table.table-bordered {
+  border: 1px solid #dee2e6 !important; /* Standard gray border */
+  border-radius: 0 !important; /* Remove any border radius */
+}
+
+/* Reset cell borders */
+.table.table-bordered th,
+.table.table-bordered td {
+  border: 1px solid #dee2e6 !important;
+  border-radius: 0 !important;
+}
+
+/* Remove any glow/shadow effects */
+.table:focus,
+.table:hover {
+  outline: none !important;
+  box-shadow: none !important;
+}
+
+/* Header specific fixes */
+.table thead th {
+  border-bottom: 2px solid #dee2e6 !important;
+}
+
+/* Button styles - completely updated */
+.btn {
+  padding: 8px 16px;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  color: white;
+  margin-right: 8px;
+  font-size: 14px;
+  min-width: 100px;
+  height: 36px;
+  text-align: center;
+  transition: all 0.2s ease;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: 500;
+  letter-spacing: 0.5px;
+}
+
+/* Specific button types */
+.addBtn {
+  background: linear-gradient(135deg, #7e289e 0%, #9b59b6 100%);
+  margin-bottom: 16px;
+  box-shadow: 0 2px 4px rgba(126, 40, 158, 0.2);
+}
+
+.view-btn {
+  background-color: #3498db;
+  border: 1px solid #2980b9;
+}
+
+.edit-btn {
+  background-color: #2ecc71;
+  border: 1px solid #27ae60;
+}
+
+.delete-btn {
+  background-color: #e74c3c;
+  border: 1px solid #c0392b;
+}
+
+.save-btn {
+  background: linear-gradient(135deg, #7e289e 0%, #9b59b6 100%);
+  border: 1px solid #6c3483;
+}
+
+.cancel-btn {
+  background-color: #95a5a6;
+  border: 1px solid #7f8c8d;
+}
+
+.download-btn {
+  background-color: #27ae60;
+  border: 1px solid #219653;
+}
+
+/* Button hover states */
+.addBtn:hover {
+  background: linear-gradient(135deg, #6c3483 0%, #8e44ad 100%);
+  transform: translateY(-2px);
+  box-shadow: 0 4px 6px rgba(126, 40, 158, 0.3);
+}
+
+.view-btn:hover {
+  background-color: #2980b9;
+  transform: translateY(-2px);
+}
+
+.edit-btn:hover {
+  background-color: #27ae60;
+  transform: translateY(-2px);
+}
+
+.delete-btn:hover {
+  background-color: #c0392b;
+  transform: translateY(-2px);
+}
+
+.save-btn:hover {
+  background: linear-gradient(135deg, #6c3483 0%, #8e44ad 100%);
+  transform: translateY(-2px);
+}
+
+.cancel-btn:hover {
+  background-color: #7f8c8d;
+  transform: translateY(-2px);
+}
+
+.download-btn:hover {
+  background-color: #219653;
+  transform: translateY(-2px);
+}
+
+/* Button focus states */
+button:focus {
+  outline: none;
+  box-shadow: 0 0 0 3px rgba(126, 40, 158, 0.3);
+}
+
+/* Modal styles */
+.modal-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: rgba(0,0,0,0.5);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 1000;
+}
+
+.modal-content {
+  background-color: white;
+  padding: 25px;
+  border-radius: 8px;
+  min-width: 500px;
+  width: 100%;
+  max-width: 500px;
+  box-shadow: 0 5px 15px rgba(0,0,0,0.3);
+}
+
+.modal-actions {
+  margin-top: 25px;
+  display: flex;
+  justify-content: flex-end;
+  gap: 10px;
+}
+
+/* Form styles */
+.form-group {
+  margin-bottom: 18px;
+}
+
+.form-group label {
+  display: block;
+  margin-bottom: 6px;
+  font-weight: 600;
+  color: #2c3e50;
+}
+
+.form-input {
+  display: block;
+  width: 100%;
+  padding: 10px;
+  border-radius: 4px;
+  border: 1px solid #bdc3c7;
+  font-size: 14px;
+  transition: border-color 0.2s ease;
+}
+
+.form-value {
+  padding: 10px;
+  background-color: #f8f9fa;
+  border-radius: 4px;
+  border: 1px solid #ecf0f1;
+}
+
+/* Animation */
+.slide-in-right {
+  animation: slideInRight 0.5s forwards;
+}
+
+@keyframes slideInRight {
+  from {
+    transform: translateX(100px);
+    opacity: 0;
+  }
+  to {
+    transform: translateX(0);
+    opacity: 1;
+  }
+}
+
+/* Error message */
+.error-message {
+  color: #e74c3c;
+  padding: 12px;
+  background-color: #fadbd8;
+  border-radius: 4px;
+  border: 1px solid #f5b7b1;
+  margin-bottom: 15px;
+}
+
+.text-center {
+  text-align: center;
+}
+
+.table-responsive {
+  overflow-x: auto;
+  -webkit-overflow-scrolling: touch;
+}
+
+/* Actions cell styling */
+.actions-cell {
+  white-space: nowrap;
+}
+
+.actions-cell > div {
+  display: flex;
+  justify-content: center;
+  gap: 8px;
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+  .btn {
+    min-width: 80px;
+    padding: 6px 12px;
+    font-size: 13px;
+  }
+  
+  .modal-content {
+    padding: 20px;
+  }
+  
+  .modal-actions {
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+}

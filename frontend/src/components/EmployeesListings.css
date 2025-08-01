@@ -1,0 +1,276 @@
+* {
+  font-family: "Raleway", sans-serif;
+}
+
+::after,
+::before {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+a {
+  text-decoration: none;
+}
+
+li {
+  list-style: none;
+}
+
+main {
+  display: flex;
+}
+
+section {
+  width: 100%;
+  min-height: 100vh;
+  color: #393739;
+  background-color: #f0f0f0;
+  padding: 40px;
+  overflow: hidden;
+  transition: all 0.35s ease-in-out;
+}
+
+nav {
+  min-width: 70px;
+  background-color: #262626;
+  display: flex;
+  flex-direction: column;
+  transition: all 0.35s ease-in-out;
+}
+
+#sidebar.expand {
+  min-width: 225px;
+}
+
+#toggle-btn {
+  background-color: transparent;
+  border: none;
+  cursor: pointer;
+  padding: 1.8rem;
+}
+
+#toggle-btn i {
+  color: #ffffff;
+  font-size: 1.3rem;
+}
+
+.sidebar-logo a {
+  margin: 0 auto;
+  color: #ffffff;
+  font-size: 1rem;
+  font-weight: 600;
+  text-align: center;
+}
+
+#sidebar:not(.expand) .sidebar-logo,
+#sidebar:not(.expand) .page-links span {
+  display: none;
+}
+
+#sidebar:not(.expand) .sidebar-footer span {
+  display: none;
+}
+
+ul {
+  padding: 0;
+  margin: 0;
+  flex: 1 1 auto;
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+}
+
+li {
+  position: relative;
+}
+
+a.page-links,
+.sidebar-footer {
+  align-items: center;
+  padding: 1rem 1.8rem;
+  color: white;
+  display: block;
+  font-size: 1rem;
+  white-space: nowrap;
+  border-left: 3px solid transparent;
+}
+
+.sidebar-footer i,
+.page-links i {
+  font-size: 1rem;
+  margin-right: 0.75rem;
+}
+
+.active,
+a.page-links:hover,
+.sidebar-footer:hover {
+  background-color: rgba(155, 89, 182, 0.2);
+  border-left: 3px solid #9b59b6;
+  background-image: linear-gradient(#7e289e, #9b59b6);
+  border-radius: 23px;
+  width: 100%;
+}
+
+span {
+  font-weight: 500;
+  color: #ffffff;
+}
+
+.sidebar-footer {
+  margin-top: auto;
+}
+
+.sidebar-footer a {
+  color: white;
+}
+
+/* Content Styling */
+body {
+  font-family: Arial, sans-serif;
+}
+
+table {
+  border-collapse: collapse;
+  width: 100%;
+  margin-top: 20px;
+}
+
+th,
+td {
+  padding: 8px;
+  border: 1px solid #ccc;
+  text-align: left;
+}
+
+.addBtn,
+.btn,
+.editBtn,
+.deleteBtn,
+.saveBtn,
+.cancelBtn {
+  padding: 10px 16px;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+.addBtn {
+  background-color: #2ecc71;
+  color: white;
+}
+
+.btn {
+  background-color: #3498db;
+  color: white;
+}
+
+.editBtn {
+  background-color: #f39c12;
+  color: white;
+}
+
+.deleteBtn {
+  background-color: #c0392b;
+  color: white;
+}
+
+.overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: rgba(0, 0, 0, 0.5);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 1000;
+}
+
+.modal {
+  background-color: white;
+  padding: 20px;
+  border-radius: 8px;
+  min-width: 300px;
+  width: 90%;
+  max-width: 400px;
+}
+
+.inputField {
+  display: block;
+  width: 100%;
+  padding: 8px;
+  border-radius: 4px;
+  border: 1px solid #ccc;
+  margin-bottom: 10px;
+}
+
+.error {
+  color: red;
+  font-size: 12px;
+}
+
+.contentWidth {
+  width: 100%;
+  max-width: 99%;
+  margin: 0 auto;
+}
+
+#app button {
+  border: none;
+  color: #fff;
+  font-weight: 600;
+  font-size: 0.9rem;
+  background-image: linear-gradient(#7e289e, #9b59b6);
+  border-radius: 19px;
+  padding: 9px 45px;
+}
+
+#app button:hover {
+  background-image: linear-gradient(#a750c4, #9b59b6);
+  color: #fff;
+  box-shadow: 0 2px 5px rgba(155, 89, 182, 0.8);
+  transform: scale(1.01);
+  cursor: pointer;
+}
+
+thead tr {
+  color: #fff;
+  background-color: #262626;
+}
+
+.table-responsive {
+  box-shadow: 0 2px 5px rgba(155, 89, 182, 0.4);
+}
+
+/* === FIX: Actions buttons side by side === */
+.actions-cell {
+  display: flex;
+  gap: 8px;
+  align-items: center;
+}
+
+.actions-cell > button {
+  display: inline-flex;
+  padding: 6px 12px;
+  font-size: 0.9rem;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+/* === SLIDE IN FROM RIGHT ANIMATION === */
+@keyframes slide-in-right {
+  0% {
+    opacity: 0;
+    transform: translateX(50px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+.slide-in-right {
+  animation: slide-in-right 0.5s ease forwards;
+}

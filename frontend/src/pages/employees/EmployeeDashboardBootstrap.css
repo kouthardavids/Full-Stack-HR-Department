@@ -1,0 +1,75 @@
+.font-raleway { font-family: 'Raleway', sans-serif; }
+
+:root {
+  --edb-purple-500: #7c3aed;
+  --edb-purple-400: #a78bfa;
+  --edb-purple-100: #ede9fe;
+}
+
+.edb-root { background-color: #fff; color:#212529; }
+
+.text-primary { color: var(--edb-purple-500) !important; }
+.link-primary { color: var(--edb-purple-500) !important; }
+.btn-primary {
+  --bs-btn-bg: var(--edb-purple-500);
+  --bs-btn-border-color: var(--edb-purple-500);
+  --bs-btn-hover-bg: var(--edb-purple-400);
+  --bs-btn-hover-border-color: var(--edb-purple-400);
+}
+.bg-primary { background-color: var(--edb-purple-500) !important; }
+
+/* Profile card */
+.edb-profile-card { background: var(--edb-purple-100); }
+.edb-profile-avatar { border:4px solid var(--edb-purple-500); }
+
+/* Metric cards */
+.edb-metric-card { background: var(--edb-purple-100); }
+.edb-metric-card .progress { height:6px; margin-top:8px; }
+
+/* Calendar */
+.edb-calendar-card { background:#fff; }
+.edb-calendar-table th { font-weight:600; }
+.edb-cal-cell { width:14%; height:32px; border-radius:4px; }
+.edb-cal-today { background: var(--edb-purple-400); color:#fff; font-weight:700; }
+
+/* Reminders */
+.edb-reminders-card { background:#fff; }
+.edb-reminders-card .list-group-item { border:none; border-bottom:1px solid rgba(0,0,0,.05); }
+.edb-reminders-card .list-group-item:last-child { border-bottom:none; }
+
+/* Attendance */
+.edb-attendance-card { background:#fff; }
+
+/* Responsive tweaks */
+@media (max-width:576px){
+  .edb-profile-card .edb-profile-avatar{width:72px;height:72px;}
+}
+
+/* Ensure modal is centered properly */
+.custom-centered-modal {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  z-index: 1050;
+  background: white;
+  border-radius: 8px;
+  width: 90%;
+  max-width: 500px;
+  box-shadow: 0 0 10px rgba(0,0,0,0.25);
+}
+
+.modal-backdrop.show {
+  z-index: 1040;
+}
+
+.edb-profile-card {
+  background: #ffffff;
+  border: 1px solid #e0e0e0;
+  border-radius: 1rem;
+  transition: box-shadow 0.3s ease;
+}
+
+.edb-profile-card:hover {
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.08);
+}

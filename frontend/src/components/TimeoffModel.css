@@ -1,0 +1,142 @@
+/* Font & Reset */
+* {
+  font-family: "Raleway", sans-serif;
+}
+
+::after,
+::before {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+/* Slide-in animation */
+@keyframes slideInRight {
+  from {
+    opacity: 0;
+    transform: translateX(100%);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+.timeoff-container {
+  display: flex;
+  flex-direction: column;
+  height: 100vh; /* full viewport height */
+  background-color: white;
+  padding-top: 1.5rem;
+  padding-bottom: 1.5rem;
+  padding-left: 3rem;
+  padding-right: 3rem;
+  opacity: 0;
+  transform: translateX(100%);
+  animation-fill-mode: forwards;
+  animation: slideInRight 0.6s ease forwards;
+}
+
+.header {
+  /* Fixed header height, no shrink */
+  flex-shrink: 0;
+}
+
+/* The table-container and table-responsive styles are kept here if they
+   provide structural layout unique to Timeoff, otherwise, they could
+   also be generalized if similar structures exist elsewhere.
+   For now, I'm assuming these might be specific to this page's layout. */
+.table-container {
+  flex-grow: 1;
+  overflow-y: auto;
+}
+
+.table-responsive {
+  /* Remove box-shadow and border if Payroll.css also defines it.
+     If Payroll.css only defines table borders/backgrounds, then keep this.
+     For now, keeping it as it was in your original TimeoffModel.css. */
+  box-shadow: 0 2px 5px rgba(155, 89, 182, 0.4);
+  border-radius: 10px;
+  border: 1px solid #9b59b6;
+}
+
+/* Buttons specifically for the Timeoff component (like the 'Request Time Off' button) */
+.btn-primary {
+  border: none;
+  color: #fff;
+  font-weight: 600;
+  font-size: 0.9rem;
+  background-image: linear-gradient(#7e289e, #9b59b6);
+  border-radius: 16px;
+  padding: 9px 45px;
+  transition: all 0.3s ease;
+}
+
+.btn-primary:hover {
+  background-image: linear-gradient(#a750c4, #9b59b6);
+  box-shadow: 0 2px 5px rgba(155, 89, 182, 0.6);
+}
+
+/* Styles for the modal (overlay, modal content, inputs within modal, etc.) */
+/* These are currently inline in Timeoff.jsx but could be moved here */
+/* (The inline styles in Timeoff.jsx are generally fine for specific component-driven styles,
+   but for consistency, it's often better to have them in CSS files.) */
+
+/* If you move the inline styles from Timeoff.jsx's 'styles' object here,
+   they would look something like this: */
+/*
+.modal-overlay {
+    position: 'fixed',
+    top: 0, left: 0, right: 0, bottom: 0,
+    backgroundColor: 'rgba(0,0,0,0.5)',
+    display: 'flex',
+    justifyContent: 'center',
+    alignItems: 'center',
+    zIndex: 1000,
+}
+
+.timeoff-modal {
+    backgroundColor: 'white',
+    padding: 20,
+    borderRadius: 8,
+    minWidth: 300,
+    width: '90%',
+    maxWidth: 500,
+    boxShadow: '0 4px 8px rgba(0,0,0,0.2)',
+}
+
+.modal-input {
+    display: 'block',
+    width: '100%',
+    padding: 8,
+    borderRadius: 4,
+    border: '1px solid #ccc',
+    marginBottom: 10,
+}
+
+.modal-save-btn {
+    padding: '10px 16px',
+    border: 'none',
+    borderRadius: 4,
+    cursor: 'pointer',
+    backgroundImage: 'linear-gradient(#7e289e, #9b59b6)',
+    color: 'white',
+    marginRight: '10px',
+}
+
+.modal-cancel-btn {
+    padding: '10px 16px',
+    border: '1px solid #ccc',
+    borderRadius: 4,
+    cursor: 'pointer',
+    backgroundColor: 'transparent',
+}
+
+.employee-info-display {
+    background-color: '#f9f9f9',
+    padding: '15px',
+    borderRadius: '5px',
+    border: '1px solid #eee',
+    marginBottom: '15px',
+}
+*/
