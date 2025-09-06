@@ -6,7 +6,7 @@ const QRScanner = forwardRef(({ onScanSuccess, scanDelay = 500 }, ref) => {
   const scanTimeoutRef = useRef(null);
 
   const handleScan = (decodedText) => {
-      console.log('QRScanner decodedText:', decodedText); // <-- Add this log
+      console.log('QRScanner decodedText:', decodedText);
     if (!decodedText || scanTimeoutRef.current) return;
     
     // Valid QR code found
