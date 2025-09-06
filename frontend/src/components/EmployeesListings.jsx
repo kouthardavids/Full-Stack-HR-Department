@@ -47,13 +47,11 @@ const EmployeesListings = () => {
     if (!emp.name.trim()) errors.name = 'Name is required';
     if (!emp.position.trim()) errors.position = 'Position is required';
 
-    // FIX: Changed emp.email.trim() to emp.contact.trim()
     if (!emp.contact.trim()) {
       errors.contact = 'Contact is required';
     } else {
       const phoneRegex = /^[0-9\-\+]{9,15}$/;
       const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
-      // FIX: Changed emp.email to emp.contact
       if (!phoneRegex.test(emp.contact) && !emailRegex.test(emp.contact)) {
         errors.contact = 'Must be a valid phone number or email';
       }

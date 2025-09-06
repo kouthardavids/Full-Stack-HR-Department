@@ -240,10 +240,6 @@ thead tr {
   background-color: #262626;
 }
 
-.table-responsive {
-  box-shadow: 0 2px 5px rgba(155, 89, 182, 0.4);
-}
-
 /* === FIX: Actions buttons side by side === */
 .actions-cell {
   display: flex;
